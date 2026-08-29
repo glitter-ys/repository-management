@@ -1,0 +1,177 @@
+.stock-operation-page {
+  --operation-accent: #147d70;
+  --operation-accent-soft: #e7f5f1;
+  --operation-glow: rgba(20, 125, 112, 0.14);
+  min-height: calc(100vh - 176px);
+  padding: clamp(12px, 3vw, 36px);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 8% 5%, var(--operation-glow), transparent 34%),
+    linear-gradient(145deg, #f8fbfa 0%, #f3f6f5 100%);
+  box-sizing: border-box;
+}
+
+.stock-operation-out {
+  --operation-accent: #c44e24;
+  --operation-accent-soft: #fff0e8;
+  --operation-glow: rgba(196, 78, 36, 0.13);
+}
+
+.stock-operation-card {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(20, 34, 31, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(24, 44, 40, 0.1);
+}
+
+.stock-operation-card .ant-card-head {
+  min-height: 92px;
+  padding-inline: clamp(20px, 4vw, 34px);
+  border-bottom: 1px solid #ecefed;
+}
+
+.stock-operation-card .ant-card-body {
+  padding: clamp(24px, 4vw, 38px);
+}
+
+.stock-operation-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-block: 14px;
+  font-family: "Microsoft YaHei UI", "PingFang SC", sans-serif;
+}
+
+.stock-operation-heading > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stock-operation-heading strong {
+  color: #18201e;
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+.stock-operation-heading small {
+  color: #74817e;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.stock-operation-icon {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--operation-accent);
+  background: var(--operation-accent-soft);
+  font-size: 25px;
+}
+
+.stock-operation-form .ant-form-item {
+  margin-bottom: 25px;
+}
+
+.stock-operation-form .ant-form-item-label > label {
+  height: auto;
+  color: #26332f;
+  font-family: "Microsoft YaHei UI", "PingFang SC", sans-serif;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.stock-operation-form .ant-select-selector,
+.stock-operation-form .ant-input-number,
+.stock-operation-form .ant-picker,
+.stock-operation-form .ant-input {
+  min-height: 48px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.stock-operation-form .ant-select-selection-item,
+.stock-operation-form .ant-select-selection-placeholder,
+.stock-operation-form .ant-picker-input > input,
+.stock-operation-form .ant-input-number-input {
+  font-size: 17px;
+}
+
+.stock-operation-form textarea.ant-input {
+  min-height: 104px;
+  padding: 12px 14px;
+  line-height: 1.65;
+  resize: vertical;
+}
+
+.stock-operation-form .ant-select-focused .ant-select-selector,
+.stock-operation-form .ant-input-number-focused,
+.stock-operation-form .ant-picker-focused,
+.stock-operation-form .ant-input:focus {
+  border-color: var(--operation-accent);
+  box-shadow: 0 0 0 3px var(--operation-glow);
+}
+
+.stock-operation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stock-operation-submit {
+  margin-top: 8px;
+  margin-bottom: 0 !important;
+}
+
+.stock-operation-submit .ant-btn {
+  height: 52px;
+  border-radius: 11px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.stock-operation-in .stock-operation-submit .ant-btn-primary {
+  border-color: var(--operation-accent);
+  background: var(--operation-accent);
+  box-shadow: 0 8px 20px rgba(20, 125, 112, 0.22);
+}
+
+.stock-operation-out .stock-operation-submit .ant-btn-primary {
+  border-color: var(--operation-accent);
+  background: var(--operation-accent);
+  box-shadow: 0 8px 20px rgba(196, 78, 36, 0.22);
+}
+
+@media (max-width: 640px) {
+  .stock-operation-page {
+    min-height: auto;
+    padding: 0;
+    background: transparent;
+  }
+
+  .stock-operation-card .ant-card-head,
+  .stock-operation-card .ant-card-body {
+    padding-inline: 18px;
+  }
+
+  .stock-operation-heading strong {
+    font-size: 23px;
+  }
+
+  .stock-operation-heading small {
+    font-size: 14px;
+  }
+
+  .stock-operation-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

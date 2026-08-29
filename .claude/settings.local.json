@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm create *)",
+      "Bash(npx tsc *)",
+      "Bash(npx tsx *)",
+      "Bash(curl -s http://localhost:3000/api/tires)",
+      "Bash(curl *)",
+      "Bash(npx kill-port *)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(npx vite *)",
+      "Bash(git config *)",
+      "Bash(gh --version)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
