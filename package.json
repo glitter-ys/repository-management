@@ -1,0 +1,13 @@
+{
+  "name": "tire-warehouse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "轮胎仓库管理系统 —— 打包脚本",
+  "scripts": {
+    "build:exe": "node build-exe.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "postject": "^1.0.0-alpha.6"
+  }
+}
